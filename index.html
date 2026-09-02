@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Anna Glado's CV website" />
+    <title>Anna Glado — CV</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f7fb;
+        --card: #ffffff;
+        --text: #1f2430;
+        --muted: #5d6472;
+        --accent: #2f6fed;
+        --border: #e5e7ef;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 32%, #fff 100%);
+        color: var(--text);
+        line-height: 1.5;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(20, 30, 60, 0.08);
+      }
+      h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3.6rem); }
+      p { margin: 0 0 16px; color: var(--muted); font-size: 1.05rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+      .button {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        border: 1px solid transparent;
+      }
+      .primary { background: var(--accent); color: white; }
+      .secondary { background: white; color: var(--accent); border-color: #cdd9ff; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 22px;
+      }
+      .panel h2 { margin: 0 0 10px; font-size: 1.2rem; }
+      .panel ul { margin: 0; padding-left: 18px; color: var(--muted); }
+      footer { margin-top: 28px; color: var(--muted); font-size: 0.95rem; }
+      iframe {
+        width: 100%;
+        height: 78vh;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: white;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <h1>Anna Glado</h1>
+        <p>Curriculum vitae and portfolio overview.</p>
+        <div class="actions">
+          <a class="button primary" href="CV.pdf" target="_blank" rel="noopener">Open CV PDF</a>
+          <a class="button secondary" href="CV.pdf" download>Download PDF</a>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Highlights">
+        <div class="panel">
+          <h2>Profile</h2>
+          <ul>
+            <li>Professional experience</li>
+            <li>Education and skills</li>
+            <li>Projects and achievements</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2>Quick access</h2>
+          <ul>
+            <li>Single-page website</li>
+            <li>Embedded PDF preview below</li>
+            <li>Works with GitHub Pages</li>
+          </ul>
+        </div>
+      </section>
+
+      <iframe src="CV.pdf" title="Anna Glado CV PDF preview"></iframe>
+      <footer>Hosted as a simple static site from this repository.</footer>
+    </main>
+  </body>
+</html>
